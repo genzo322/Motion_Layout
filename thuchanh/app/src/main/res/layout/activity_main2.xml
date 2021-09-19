@@ -26,13 +26,15 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:background=" #C4C4C4"
         android:backgroundTint=" #C4C4C4"
         android:text="ADD"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="352dp" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
     <ImageView
         android:id="@+id/imageView7"
