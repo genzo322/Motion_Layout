@@ -6,8 +6,21 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="1000">
+        motion:duration="1000"
+        motion:motionInterpolator="cubic(0.87,0,0.8,0.8)">
        <KeyFrameSet>
+           <KeyPosition
+               motion:motionTarget="@+id/img1"
+               motion:framePosition="48"
+               motion:keyPositionType="parentRelative"
+               motion:percentX="0.122"
+               motion:percentY="0.538" />
+           <KeyPosition
+               motion:motionTarget="@+id/img1"
+               motion:framePosition="20"
+               motion:keyPositionType="parentRelative"
+               motion:percentX="0.178"
+               motion:percentY="0.29" />
        </KeyFrameSet>
         <OnClick motion:targetId="@+id/button" />
         <OnClick motion:targetId="@+id/button2" />
@@ -52,15 +65,6 @@
             motion:layout_constraintStart_toStartOf="parent"
             android:id="@+id/button" />
         <Constraint
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            motion:layout_constraintHorizontal_bias="0.491"
-            motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="wrap_content"
-            motion:layout_constraintTop_toBottomOf="@+id/button"
-            motion:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/img2" />
-        <Constraint
             motion:layout_editor_absoluteY="362dp"
             android:layout_height="wrap_content"
             motion:layout_constraintHorizontal_bias="0.498"
@@ -84,28 +88,4 @@
             motion:layout_constraintStart_toStartOf="parent"
             android:id="@+id/button3" />
     </ConstraintSet>
-    <ConstraintSet android:id="@+id/end1" >
-        <Constraint
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/img2"
-            motion:layout_constraintBottom_toBottomOf="@+id/img4"
-            motion:layout_constraintEnd_toEndOf="@+id/img4"
-            motion:layout_constraintStart_toStartOf="@+id/img4"
-            motion:layout_constraintTop_toTopOf="@+id/img4"
-            android:visibility="invisible" />
-        <Constraint
-            motion:layout_editor_absoluteY="362dp"
-            android:layout_height="wrap_content"
-            motion:layout_constraintHorizontal_bias="0.498"
-            motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="wrap_content"
-            motion:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/button2" />
-    </ConstraintSet>
-    <Transition
-        motion:constraintSetStart="@+id/start"
-        motion:constraintSetEnd="@+id/end1" >
-        <OnClick motion:targetId="@+id/button2" />
-    </Transition>
 </MotionScene>
